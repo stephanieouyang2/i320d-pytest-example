@@ -6,9 +6,9 @@ def fix_phone_num(phone_num_to_fix):
 
   if len(number) != 10:
     raise ValueError("Must be 10 digits")
-  area_code = phone_num_to_fix[0:3] # 512 (first three digits)
-  three_part = phone_num_to_fix[3:6] # 555 (next three digits)
-  four_part = phone_num_to_fix[6:] # # 8823 (last four digits)
+  area_code = number[0:3] # 512 (first three digits)
+  three_part = number[3:6] # 555 (next three digits)
+  four_part = number[6:] # # 8823 (last four digits)
   
   fixed_num = "(" + area_code + ")" + " " + three_part + " " + four_part 
   

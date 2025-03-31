@@ -24,8 +24,10 @@ def test_fix_phone_num_with_extra_chars():
     assert fix_phone_num("555-442-98761") == "(555) 442 9876"
     assert fix_phone_num("(321) 654 3333") == "(321) 654 3333"
 
-def phone_num_value_error():
+def test_phone_num_value_error():
   with pytest.raises(ValueError):
     fix_phone_num("abc-def-ghij")
-
+def test_fix_phone_num_short_input():
+  with pytest.raises(ValueError):
+    fix_phone_num("12345")
     
